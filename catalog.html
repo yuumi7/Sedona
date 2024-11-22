@@ -1,106 +1,151 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
-<body>
-    <header>
-        <nav>
-            <a>
-                <img src="img/logo.svg" width="139" height="70" alt="Логотип Седоны">
+<head>
+    <meta charset="UTF-8">
+    <title>Седона</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.png">
+</head>
+
+<body class="page-body">
+    <header class="main-header">
+        <nav class="main-navigation">
+            <a class="main-header-logo">
+                <img src="img/logo.svg" width="139" height="70" alt="Логотип Седоны" class="logo">
             </a>
-            <ul>
+            <ul class="site-navigation">
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="blank.html">О Седоне</a></li>
                 <li><a href="catalog.html">Гостиницы</a></li>
             </ul>
-            <button><a href="blank.html">ХОЧУ СЮДА!</a></button>
+            <button class="button-custom"><a href="blank.html">ХОЧУ СЮДА!</a></button>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h1>Гостиницы Седоны</h1>
-            <p>Гостиницы</p>
-            Инфраструктура:<ul>
-                <li><input type="checkbox" checked>Бассейн</li>
-                <li><input type="checkbox" checked>Парковка</li>
-                <li><input type="checkbox">Wi-Fi</li>
-            </ul>
-            Тип жилья:<ul>
-                <li><input type="radio" checked>Гостиница</li>
-                <li><input type="radio">Мотель</li>
-                <li><input type="radio">Апартаменты</li>
-            </ul>
-            Стоимость, ₽:
-            от 0<input type="range" min="0" max="9000">до 9000
 
-            <button>Применить</button>
-            <button type="reset">Сбросить</button>
+        <section class="filters">
+
+            <div class="background-container">
+                <img src="img/catalog-background1.png" width="1200" height="408" alt="Задний план Седона">
+            </div>
+            <div class="text-overlay">
+                <h1>Гостиницы Седоны</h1>
+                <p>Гостиницы</p>
+                <h3>Инфраструктура:</h3>
+                <ul class="checkbox-list">
+                    <li><input type="checkbox" checked class="custom-checkbox">Бассейн</li>
+                    <li><input type="checkbox" checked class="custom-checkbox">Парковка</li>
+                    <li><input type="checkbox" class="custom-checkbox">Wi-Fi</li>
+                </ul>
+            </div>
+
+            <div class="radio-overlay">
+                <h3>Тип жилья:</h3>
+                <ul class="radio-list">
+                    <li><input type="radio" checked>Гостиница</li>
+                    <li><input type="radio">Мотель</li>
+                    <li><input type="radio">Апартаменты</li>
+                </ul>
+            </div>
+
+            <div class="range">
+                <h3>Стоимость,Р:</h3>
+                <input type="number" name="from" id="from" min="0">
+                <input type="number" name="to" id="to" max="9000">
+            </div>
+            <div class="range-input">
+                <div class="range-scale">
+                    <div class="range-slider">
+                        <button class="range-toggle toggle-min" type="button">
+                            <span class="visually-hidden">Изменить миниальную цену</span>
+                        </button>
+                        <button class="range-toggle toggle-max" type="button">
+                            <span class="visually-hidden">Изменить маскимальную цену</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="reset-submit">
+                <button class="button-blue">Применить</button>
+                <button class="button-reset" type="reset">Сбросить</button>
+            </div>
         </section>
-        <section>
+        <section class="results">
             <h2>Найдено гостиниц: 38</h2>
             <select name="price">
                 <option value="cheap">Сначала дешёвые</option>
                 <option value="expensive">Сначала дорогие</option>
             </select>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+            <ul class="mode-list">
+                <li class="mode">1</li>
+                <li class="mode">2</li>
+                <li class="mode">3</li>
             </ul>
-        </section>
-        <section>
-            <ul>
-                <li>
+
+
+            <ul class="results-list">
+                <li class="result-item">
                     <h3>Amara Resort & Spa</h3>
+                    <img src="img/hotel-1.png" width="300" height="206" alt="Фотография отеля">
                     <p>Гостиница От 4000</p>
-                    <button>Подробнее</button>
-                    <button>В избранное</button>
+                    <button class="button">Подробнее</button>
+                    <button class="button-favorite blue-button">В избранное</button>
                     <p>Рейтинг:8,5</p>
                 </li>
-                <li>
+                <li class="result-item">
                     <h3>Desert Quail Inn</h3>
-                    <p>Гостиница От 3000</p>
-                    <button>Подробнее</button>
-                    <button>В избранное</button>
+                    <img src="img/hotel-2.png" width="300" height="206" alt="Фотография отеля">
+                    <p>Гостиница От 2000</p>
+
+                    <button class="button">Подробнее</button>
+                    <button class="button-favorite blue-button">В избранное</button>
                     <p>Рейтинг:8,9</p>
                 </li>
-                <li>
+                <li class="result-item">
                     <h3> Villas at Poco Diablo</h3>
-                    <p>Гостиница От 2000</p>
-                    <button>Подробнее</button>
-                    <button>В избранное</button>
+                    <img src="img/hotel-3.png" width="300" height="206" alt="Фотография отеля">
+                    <p>Гостиница От 3000</p>
+
+                    <button class="button">Подробнее</button>
+                    <button class="button-favorite-active blue-button">В избранном</button>
                     <p>Рейтинг:9,2</p>
                 </li>
-                <li>
+                <li class="result-item">
                     <h3>GreenTree Inn</h3>
-                    <p>Гостиница От 3000</p>
-                    <button>Подробнее</button>
-                    <button>В избранное</button>
+                    <img src="img/hotel-4.png" width="300" height="206" alt="Фотография отеля">
+                    <p>Гостиница От 2000</p>
+
+                    <button class="button">Подробнее</button>
+                    <button class="button-favorite blue-button">В избранное</button>
                     <p>Рейтинг:9,2</p>
                 </li>
             </ul>
-            <button>Загрузить ещё</button>
-        </section>
-        <section>
+            <button class="button-blue">Загрузить ещё</button>
+
+
             Гостиниц на странице: <select name="number">
                 <option value="4">4</option>
                 <option value="6">6</option>
 
             </select>
-            <section>
-                <ul class="pagination">
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li class="dots"><a href="#">...</a></li>
-                    <li><a href="#">10</a></li>
-                </ul>
-            </section>
+
+            <ul class="pagination">
+                <li class="page-number active"><a href="#">1</a></li>
+                <li class="page-number"><a href="#">2</a></li>
+                <li class="page-number"><a href="#">3</a></li>
+                <li class="page-number"><a href="#">4</a></li>
+                <li class="page-dots"><a href="#">...</a></li>
+                <li class="page-number"><a href="#">10</a></li>
+            </ul>
+
         </section>
     </main>
-    <footer>
-        <section>
+    <footer class="main-footer">
+        <section class="newsletter">
             <h2>Подпишитесь на рассылку</h2>
             <p>Только полезная информация и никакого спама,
                 честное бойскаутское!</p>
@@ -108,20 +153,25 @@
             <form action="submit" method="post">
 
                 <input type="email" id="email" name="email" placeholder="Ваш e-mail">
-                <button type="submit">Подписаться</button>
+                <button type="submit" class="button-blue">Подписаться</button>
             </form>
 
         </section>
-        <section>
-            <ul>
-                <li><a href="#">Твиттер</a></li>
-                <li><a href="#">Фейсбук</a></li>
-                <li><a href="#">Ютуб</a></li>
+        <section class="contacts">
+            <ul class="footer-social">
+                <li><a class="social-button-twitter" href="https://twitter.com/htmlacademy_ru"> <img
+                            src="img/twitter.svg" width="18" height="15" alt="Твиттер"> </a>
+                </li>
+                <li><a class="social-button-facebook" href="https://www.facebook.com/htmlacademy"><img
+                            src="img/social-facebook.svg" width="10" height="18" alt="Фейсбук"></a></li>
+                <li><a class="social-button-youtube" href=" https://www.youtube.com/c/HTMLAcademyRUS"><img
+                            src="img/youtube.svg" width="20" height="16" alt="Ютуб"></a></li>
             </ul>
-        </section>
-        <section><a href="tel:+78128121212">+7 (812) 812-12-12</a></section>
-        <section>
-            <p><a href="https://htmlacademy.ru">.html academy</a></p>
+
+            <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+
+            <a class="footer-copyright" href="https://htmlacademy.ru"><img src="img/brand=htmlacademy.svg"
+                    alt="HTML Academy Logo"></a>
         </section>
     </footer>
 </body>
