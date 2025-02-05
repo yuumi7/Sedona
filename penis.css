@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.penis {
+  padding: 100px;
+}
+
+.breadcrumbs {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+.breadcrumbs-link {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+}
+
+.breadcrumbs-item {
+  position: relative;
+}
+
+.breadcrumbs-item:not(:last-child)::before {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #000;
+  content: ">";
+}
+
+.breadcrumbs-link-current {
+  color: bisque;
+}
